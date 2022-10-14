@@ -21,3 +21,10 @@
  smallest and largest repeated number in array
  find the missing  number in array
  smallest positive missing number in array
+
+ # Day Four
+ Richest customer wealth 2D array
+ Number of setps to reduce a number to zero 
+ Middle of the linked list
+ Remove duplicates from sorted array
+ Can letter be made from other letters 

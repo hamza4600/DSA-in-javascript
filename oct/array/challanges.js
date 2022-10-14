@@ -53,7 +53,7 @@ function longestArthematicSubArray(arr) {
       count = 0;
     }
   }
-  return max + 2;
+  return max + 2; 
 }
 console.log("Longest artematic sunarray")
 console.log(longestArthematicSubArray([10,7,4,6,8,10,11]));

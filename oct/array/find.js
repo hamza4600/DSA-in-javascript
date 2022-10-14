@@ -88,4 +88,4 @@ function binarySeaarch(arr , n) {
 }
 
 // test
-console.log(binarySeaarch(arr, 10));
+console.log(binarySeaarch([10,15,18], 10));
