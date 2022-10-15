@@ -107,7 +107,16 @@ function canConstruct(ransomNote, magazine) {
   }
   return true;
 }
-
+// above code can be written in one line
+var canConstruct3 = function (ransomNote, magazine) {
+  return [...ransomNote].every((char) => {
+    if (magazine.includes(char)) {
+      magazine = magazine.replace(char, "");
+      return true;
+    }
+    return false;
+  });
+};
 // can alsobe wrritten as
 var canConstruct2 = function (ransomNote, magazine) {
   const v = magazine.split(""); //array of letters from magazine
