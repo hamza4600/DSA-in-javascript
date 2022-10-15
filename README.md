@@ -28,3 +28,13 @@
  Middle of the linked list
  Remove duplicates from sorted array
  Can letter be made from other letters 
+
+# Day Five 
+ subArray with given sum
+ Matrix transpose and 2 dimensional array
+ Kadane's algorithm
+ Maximum subarray sum
+ Maximum subarray sum circular
+ calPoints & Baseball game
+ String 
+ character Array
