@@ -81,8 +81,8 @@ function transposeMatrix(arr) {
   console.log(arr);
   for (var i = 0; i < arr.length; i++) {
     for (var j = i; j < arr[i].length; j++) {
-      let temp = arr[i][j];
-      arr[i][j] = arr[j][i];
+      let temp = arr[i][j]; 
+      arr[i][j] = arr[j][i]; 
       arr[j][i] = temp;
     }
   }
@@ -127,9 +127,9 @@ const sortedMatrix = [
   [7, 8, 9],
 ];
 function searchSortedMatrix(arr, target) {
-  let i = 0;
-  let j = arr[0].length - 1;
-  while (i < arr.length && j >= 0) {
+  let i = 0; // start row
+  let j = arr[0].length - 1;  // start col
+  while (i < arr.length && j >= 0) { // if i is less than row length and j is greater than 0
     if (arr[i][j] === target) {
       console.log("Index of target is ", i, j);
       console.log("Row is ", arr[i]);

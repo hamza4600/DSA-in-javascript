@@ -38,3 +38,11 @@
  calPoints & Baseball game
  String 
  character Array
+
+# Week 2
+Turing question 
+Bits
+Bitwise AND of numbers range
+Recusrion
+Js array Methods 
+
