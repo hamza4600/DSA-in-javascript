@@ -63,6 +63,14 @@ var num = [1, 2, 3, 4];
 var pushFn = (arr) => arr.pop(); // drops right most elemet from array and returns it
 console.log(pushFn(num));
 
+// slice
+var sliceFn = (arr) => arr.slice(1, 3); // returns elements from index 1 to 3
+console.log(sliceFn(num));
+
+
+
+
+
 // from(fromArraybuffer)
 // converts arraybuffer to array
 let buffer = new ArrayBuffer(8); //  allocates 8 bytes of memory

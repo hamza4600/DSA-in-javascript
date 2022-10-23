@@ -46,3 +46,14 @@ Bitwise AND of numbers range
 Recusrion
 Js array Methods 
 
+
+# Week 3
+Linked List
+Stack
+Queue
+Binary Tree
+Binary Search Tree
+Heap
+Graph
+Hash Table
+Trie
