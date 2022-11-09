@@ -6,7 +6,7 @@
 // Graphs are also used in file system optimizations. For example, let us consider we have a file system that contains a lot of files and folders. The files and folders are arranged in a tree structure. Now suppose you issued a command to delete a folder that contains a lot of files and folders. To delete the folder, first, all the files and folders inside the folder should be found and then deleted. If one uses tree data structure for this purpose then it takes O(n) time where n is the number of files and folders. To make it O(Log n), we can use Graphs.
 
 // implementation of graph data structure
-
+// basicall is an object with key as node and value as array of nodes connected to it
 class Graph {
   constructor() {
     this.adjacencyList = {};
@@ -34,8 +34,12 @@ class Graph {
     delete this.adjacencyList[vertex];
   }
   // findNode
-    findNode(vertex) {
+    findNode(vertex) { // takes O(1) 
         return this.adjacencyList[vertex];
+    }
+    // allNodes
+    allNodes() {
+        return Object.keys(this.adjacencyList);
     }
 }
 
@@ -49,7 +53,12 @@ g.addEdge("Tokyo", "Dallas");
 g.addEdge("Dallas", "Aspen");
 g.addEdge("Hong Kong", "Tokyo");
 g.addEdge("Hong Kong", "Dallas");
-
+//  represented as an array of edges
+// console.log(g.depthFirstRecursive("Hong Kong"));
+// console.log(g.depthFirstIterative("Hong Kong"));
+console.log(g);
+console.log(g.allNodes());
+console.log(typeof g.allNodes());
 // console.log(g);
 // console.log(g.findNode("Tokyo"));
 // console.log(g.findNode("Dallas"));
@@ -75,7 +84,7 @@ Graph.prototype.depthFirstRecursive = function (start) {
 };
 // console.log(g.depthFirstRecursive("Tokyo"));
 
-Graph.prototype.depthFirstIterative = function (start) {
+Graph.prototype.depthFirstIterative = function (start) { // use Stack to store nodes visite the node and push its children to stack and when stack is poped visit the node and push its children to stack
     const stack = [start];
     const result = [];
     const visited = {};
@@ -96,7 +105,7 @@ Graph.prototype.depthFirstIterative = function (start) {
 };
 // console.log(g.depthFirstIterative("Tokyo"));
 
-Graph.prototype.breadthFirstSearch = function (start) {
+Graph.prototype.breadthFirstSearch = function (start) {  // visit node one level at a time to prevent vistinh same node more than once we  mantain object of visited nodes 
     const queue = [start];
     const result = [];
     const visited = {};

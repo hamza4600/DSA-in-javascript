@@ -24,7 +24,7 @@ class BinarySearchTree {
       return this;
     } else {
       let current = this.root;
-      while (true) {
+      while (true) { // loop until we find the right place to insert the new node
         if (value === current.value) return undefined;
         if (value < current.value) {
           if (current.left === null) {
@@ -60,7 +60,7 @@ class BinarySearchTree {
     if (!found) return undefined;
     return current;
   }
-  contains(value) {
+  contains(value) { // check if the value is in the tree
     if (this.root === null) return false;
     let current = this.root,
       found = false;
@@ -75,7 +75,7 @@ class BinarySearchTree {
     }
     return false;
   }
-  BFS() {
+  BFS() { // Breadth First Search - level by level
     let node = this.root,
       data = [],
       queue = [];
@@ -88,7 +88,7 @@ class BinarySearchTree {
     }
     return data;
   }
-  DFSPreOrder() {
+  DFSPreOrder() { // Depth First Search - PreOrder - Root, Left, Right
     let data = [];
     let current = this.root;
     function traverse(node) {
@@ -99,7 +99,7 @@ class BinarySearchTree {
     traverse(current);
     return data;
   }
-  DFSPostOrder() {
+  DFSPostOrder() { // Depth First Search - PostOrder - Left, Right, Root
     let data = [];
     let current = this.root;
     function traverse(node) {
@@ -110,7 +110,7 @@ class BinarySearchTree {
     traverse(current);
     return data;
   }
-  DFSInOrder() {
+  DFSInOrder() { // Depth First Search - InOrder - Left, Root, Right
     let data = [];
     let current = this.root;
     function traverse(node) {
@@ -121,4 +121,25 @@ class BinarySearchTree {
     traverse(current);
     return data;
   }
+  // getItems
+  getItems() { // get all the items in the tree
+    return this.root;
+  }
+
 }
+
+let tree = new BinarySearchTree();
+tree.insert(10);
+tree.insert(6);
+tree.insert(15);
+tree.insert(3);
+tree.insert(8);
+tree.insert(20);
+console.log(tree.find(10));
+
+//    10
+//  6    15
+//3  8     20
+
+// console.log(tree.getItems());
+// console.log(tree.DFSInOrder());

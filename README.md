@@ -57,3 +57,6 @@ Heap
 Graph
 Hash Table
 Trie
+Circular Linked List  , Double Linked List
+Priority Queue , Deque or Double Ended Queue
+Min Heap , Max Heap 

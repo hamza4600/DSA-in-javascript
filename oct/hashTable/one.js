@@ -15,7 +15,7 @@ class HashTable {
   }
   _hash(key) {
     let total = 0;
-    let WEIRD_PRIME = 31;
+    let WEIRD_PRIME = 31; // used to reduce the number of collisions
     for (let i = 0; i < Math.min(key.length, 100); i++) {
       let char = key[i];
       let value = char.charCodeAt(0) - 96;
@@ -25,7 +25,7 @@ class HashTable {
   }
   set(key, value) {
     let index = this._hash(key);
-    if (!this.keyMap[index]) {
+    if (!this.keyMap[index]) { // if there is no value at that index
       this.keyMap[index] = [];
     }
     this.keyMap[index].push([key, value]);
@@ -64,7 +64,7 @@ class HashTable {
           }
         }
       }
-    }
+    } 
     return valuesArr;
   }
   // seraching
@@ -84,10 +84,24 @@ class HashTable {
 let ht = new HashTable(17);
 ht.set("maroon", "#800000");
 ht.set("yellow", "#FFFF00");
-ht.set("olive", "#808000");
-
+ht.set("olivfve", "#808000");
+ht.set("tcee", "#808000");
+ht.set("olivaz2e", "#808400");
+ht.set("olivxse", "#808200");
+ht.set("olsasive", "#808700");
+ht.set("olivvve", "#808100");
+ht.set("olivdcde", "#808018");
+ht.set("olivdcde", "#808090");
+console.log("HashTable by using array");
 console.log(ht.get("maroon"));
+console.log(ht.get("yellow"));
+console.log(ht.get("olive"));
 
+console.log(ht.keys());
+console.log(ht.values());
+console.log("Type is",typeof(ht));
+
+// it is implementated by using Object
 class HashTable2 {
   constructor() {
     this.values = {};
@@ -101,7 +115,7 @@ class HashTable2 {
 
   add(key, value) {
     const hash = this.calculateHash(key);
-    if (!this.values.hasOwnProperty(hash)) {
+    if (!this.values.hasOwnProperty(hash)) { // hasOwnProperty means if hash is not present
       this.values[hash] = {};
     }
     if (!this.values[hash].hasOwnProperty(key)) {
@@ -123,3 +137,18 @@ class HashTable2 {
   }
   
 }
+ 
+const myHashTable = new HashTable2();
+myHashTable.add("firstName", "John");
+myHashTable.add("1", "John ne hjdcbduc edfvuj");
+myHashTable.add("lastName", "Doe");
+myHashTable.add("age", 25);
+myHashTable.add("job", "developer");
+myHashTable.add("city", "London");
+myHashTable.add("country", "England");
+console.log(myHashTable.search("firstName"));
+console.log(myHashTable.search("lastName"));
+console.log(myHashTable.search("age"));
+console.log(myHashTable.search("1"));
+
+
