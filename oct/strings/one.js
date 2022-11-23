@@ -53,16 +53,16 @@ let str2 = 'Hello America';
 
 class String {
     // this is called concatenation
-    add(str1 , str2) {
-        return str1 +" "+ str2;
+    add(str1, str2) {
+        return str1 + " " + str2;
     }
     // this is called interpolation
-    add2(str1 , str2) {
+    add2(str1, str2) {
         return `${str1} ${str2}`;
     }
     // this is called slicing
     slice(str) {
-        return str.slice(0,5);
+        return str.slice(0, 5);
     }
     // this is called splitting
     split(str) {
@@ -70,7 +70,7 @@ class String {
     }
     // this is called replacing
     replace(str) {
-        return str.replace("World","America");
+        return str.replace("World", "America");
     }
     // this is called searching
     search(str) {
@@ -97,7 +97,7 @@ class String {
         return str.charCodeAt(0);
     }
     // this is called concat
-    concat(str1 , str2) {
+    concat(str1, str2) {
         return str1.concat(str2);
     }
     // this is called endsWith
@@ -126,17 +126,17 @@ class String {
     }
     // this is called replaceAll
     replaceAll(str) {
-        return str.replaceAll("World","America");
+        return str.replaceAll("World", "America");
     }
     // this is called search
     search(str) {
         return str.search("World");
     }
-    
+
 }
 
 const string = new String();
-console.log(string.add(str,str2));
+console.log(string.add(str, str2));
 // test all the methods above and see what they do
 
 
@@ -146,7 +146,7 @@ console.log(string.add(str,str2));
 // function that will return it string are lower case to upper case and vice versa
 function swapCase(str) {
     return str.split("").map((char) => {
-        if(char === char.toUpperCase()) {
+        if (char === char.toUpperCase()) {
             return char.toLowerCase();
         }
         else {
@@ -171,15 +171,15 @@ function maxRepeatedChar(str) {
     let maxChar = "";
     let maxCount = 0;
     str.split("").forEach((char) => {
-        if(charMap[char]) {
+        if (charMap[char]) {
             charMap[char]++;
         }
         else {
             charMap[char] = 1;
         }
     });
-    for(let char in charMap) {
-        if(charMap[char] > maxCount) {
+    for (let char in charMap) {
+        if (charMap[char] > maxCount) {
             maxCount = charMap[char];
             maxChar = char;
         }

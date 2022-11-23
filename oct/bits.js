@@ -19,7 +19,15 @@ console.log("isOdd", isOdd(2));
 // 1 ^ 1 = 0
 // 0 ^ 0 = 0
 // 1 ^ 0 = 1
-// 0 ^ 1 = 1
+// using And
+// 1 & 1 = 1
+// 0 & 0 = 0
+// 1 & 0 = 0
+// using OR
+// 1 | 1 = 1
+// 0 | 0 = 0
+// 1 | 0 = 1
+
 function everyNum(arr) {
   let num = 0;
   for (var i = 0; i < arr.length; i++) {
@@ -65,7 +73,7 @@ console.log("setIBit", setIBit(8, 8));
 // 0000 = 0
 // 8 - 0 = 8
 function findRightMostSetBit(num) {
-  return num & ~(num - 1);
+  return num & ~(num - 1);  // ~ is used to 
 }
 console.log("findRightMostSetBit", findRightMostSetBit(8));
 
@@ -105,7 +113,7 @@ console.log(
   "missingNum",
   missingNum([
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-  ])  
+  ])
 );
 
 // using XOR

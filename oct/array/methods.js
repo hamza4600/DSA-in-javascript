@@ -68,9 +68,6 @@ var sliceFn = (arr) => arr.slice(1, 3); // returns elements from index 1 to 3
 console.log(sliceFn(num));
 
 
-
-
-
 // from(fromArraybuffer)
 // converts arraybuffer to array
 let buffer = new ArrayBuffer(8); //  allocates 8 bytes of memory

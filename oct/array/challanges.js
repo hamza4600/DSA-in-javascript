@@ -6,8 +6,6 @@ function maxTillI(arr) {
     if (arr[i] > max) {
       max = arr[i];
     }
-     
-      
   }
 }
 
@@ -27,14 +25,14 @@ function subSequenceArray(arr) {
   let count = 0;
   for (let i = 0; i < arr.length; i++) {
     for (let j = i; j < arr.length; j++) {
-      count+=arr[j];
+      count += arr[j];
       console.log(arr.slice(i, j + 1));
       // console.log((i, j + 1)); // will print out the sum 
     }
   }
   return count;
 }
-console.log(subSequenceArray([1, 2, 0 , 7, 2]));
+console.log(subSequenceArray([1, 2, 0, 7, 2]));
 
 
 // arthematic array is a array in which the difference between the consecutive element is same
@@ -53,10 +51,10 @@ function longestArthematicSubArray(arr) {
       count = 0;
     }
   }
-  return max + 2; 
+  return max + 2;
 }
 console.log("Longest artematic sunarray")
-console.log(longestArthematicSubArray([10,7,4,6,8,10,11]));
+console.log(longestArthematicSubArray([10, 7, 4, 6, 8, 10, 11]));
 
 
 //  find repeated element in array of small number
@@ -64,7 +62,7 @@ console.log(longestArthematicSubArray([10,7,4,6,8,10,11]));
 // output is 1 only
 
 function repeatedElement(arr) {
-  let repet =[];
+  let repet = [];
   for (let i = 0; i < arr.length; i++) {
     for (let j = i + 1; j < arr.length; j++) {
       if (arr[i] === arr[j]) {
@@ -76,10 +74,10 @@ function repeatedElement(arr) {
   // now we have array of repeated element
   // show the element which is repeated more than once
   let min = repet[0];
-  for(let i = 0; i < repet.length; i++){
+  for (let i = 0; i < repet.length; i++) {
     // smallest item in array
-    for(let j = i + 1; j < repet.length; j++){
-      if(min > repet[j]){
+    for (let j = i + 1; j < repet.length; j++) {
+      if (min > repet[j]) {
         min = repet[j];
       }
     }
@@ -89,34 +87,6 @@ function repeatedElement(arr) {
 console.log("Repeated element in array");
 console.log(repeatedElement([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 10]));
 
-//  now we wil print out the index postion of the repeated element
-function repeatedElementIndex(arr) {
-  let repet =[];
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = i + 1; j < arr.length; j++) {
-      if (arr[i] === arr[j]) {
-        repet.push(i);
-      }
-    }
-  }
-  // return repet;
-  // now we have array of repeated element
-  // show the element which is repeated more than once
-  let min = repet[0];
-  for(let i = 0; i < repet.length; i++){
-    // smallest item in array
-    for(let j = i + 1; j < repet.length; j++){
-      if(min > repet[j]){
-        min = repet[j];
-      }
-    }
-  }
-  return min;
-}
-
-console.log("Repeated element in array");
-console.log(repeatedElementIndex([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 10]));
-
 // unsorted array A of size n , find the continuse subarray which add to a given number S
 // input [1,2,3,7,5] , S = 12
 // output [2,3,7]
@@ -125,7 +95,7 @@ function continuseSubArray(arr, S) {
   let sum = 0;
   let start = 0;
   let end = 0;
-   while (end < arr.length) {
+  while (end < arr.length) {
     if (sum < S) {
       sum += arr[end];
       end++;
@@ -138,7 +108,7 @@ function continuseSubArray(arr, S) {
   }
 }
 console.log("Continuse subarray");
-console.log(continuseSubArray([6,6,1, 2, 3, 7, 5], 12));
+console.log(continuseSubArray([6, 6, 1, 2, 3, 7, 5], 12));
 
 // find the smallest positive missing number in array
 // input [0,-10,1,3,-20]
@@ -158,4 +128,4 @@ console.log(missingNumber([0, -10, 1, 3, -20]));
 // can also solve it with check array
 // input [0,-10,1,3,-20]
 // output 2
-function missingNumberCheckArray(arr) {}  
+function missingNumberCheckArray(arr) { }  

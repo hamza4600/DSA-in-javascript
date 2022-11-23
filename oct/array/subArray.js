@@ -70,7 +70,7 @@ console.log(
 
 function maxCircularSubArraySum(arr) {
   // Kadien Algorithm
-    const kadanes = (arr) => {
+  const kadanes = (arr) => {
     let currentSum = 0;
     let maxSum = 0;
     for (var i = 0; i < arr.length; i++) {
@@ -84,17 +84,17 @@ function maxCircularSubArraySum(arr) {
   };
 
   // Opertaions
-  let wrapSum =0; 
-  let nowrapSum =0;
+  let wrapSum = 0;
+  let nowrapSum = 0;
   nowrapSum = kadanes(arr);
   let totalSum = 0;
-    for (var i = 0; i < arr.length; i++) {
-        totalSum += arr[i];
-        arr[i] = -arr[i];
-    }
-    wrapSum = totalSum + kadanes(arr);
-    return wrapSum ;
-    // return Math.max(wrapSum, nowrapSum);
+  for (var i = 0; i < arr.length; i++) {
+    totalSum += arr[i];
+    arr[i] = -arr[i];
+  }
+  wrapSum = totalSum + kadanes(arr);
+  return wrapSum;
+  // return Math.max(wrapSum, nowrapSum);
 }
 
 console.log(
@@ -103,20 +103,19 @@ console.log(
 );
 // it is not working properly for all the cases  solve it by kadane's algorithm
 
-
 // Pair Sum Problem
 // Given an array A[] and a number x, check for pair in A[] with sum as x
 // time complexity : O(n^2)
 function pairSum(arr, sum) {
-    for (var i = 0; i < arr.length; i++) {
-        for (var j = i + 1; j < arr.length; j++) {
-            if (arr[i] + arr[j] == sum) {
-                console.log(arr[i], arr[j]);
-                return true;
-            }
-        }
+  for (var i = 0; i < arr.length; i++) {
+    for (var j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] == sum) {
+        console.log(arr[i], arr[j]);
+        return true;
+      }
     }
-    return false;
+  }
+  return false;
 }
 
 console.log("pair sum", pairSum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 19));
@@ -124,32 +123,32 @@ console.log("pair sum", pairSum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 19));
 // Optimized Solution
 // time complexity : O(n)
 function OptimizePairSum(arr, sum) {
-    var obj = {};
-    for (var i = 0; i < arr.length; i++) {
-        if (obj[sum - arr[i]]) {
-            console.log(arr[i], sum - arr[i]);
-            return true;
-        }
-        obj[arr[i]] = true;
+  var obj = {};
+  for (var i = 0; i < arr.length; i++) {
+    if (obj[sum - arr[i]]) {
+      console.log(arr[i], sum - arr[i]);
+      return true;
     }
-    return false;
+    obj[arr[i]] = true;
+  }
+  return false;
 }
 console.log("pair sum", OptimizePairSum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 19));
 
 // smae solution with different approach in while loop 
 function OptimizePairSum2(arr, sum) {
-    let low =0;
-    let high =arr.length -1;
-    while (low < high) {
-        if (arr[low] + arr[high] == sum) {
-            console.log(arr[low], arr[high]);
-            return true;
-        } else if (arr[low] + arr[high] < sum) {
-            low++;
-        } else {
-            high--;
-        }
+  let low = 0;
+  let high = arr.length - 1;
+  while (low < high) {
+    if (arr[low] + arr[high] == sum) {
+      console.log(arr[low], arr[high]);
+      return true;
+    } else if (arr[low] + arr[high] < sum) {
+      low++;
+    } else {
+      high--;
     }
-    return false;
+  }
+  return false;
 }
 console.log("pair sum", OptimizePairSum2([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 19));

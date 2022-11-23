@@ -132,9 +132,9 @@ console.log(
 function ReverseBits(num){
 	var result =0;
 	for(var i=0; i <32; i++){
-		result = result << 1;
+		result = result << 1;  // left shift result by 1 or multiply by 2
 		result = result | (num & 1);
-		num= num >> 1 
+		num= num >> 1  // num = num /2
 	}
 	return result;
 }

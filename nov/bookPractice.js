@@ -1,9 +1,9 @@
 // Practice Books 
 function factRe(num) {
-	if(num === 1) {
+	if (num === 1) {
 		return num
 	}
-	return num * factRe(num-1);
+	return num * factRe(num - 1);
 }
 
 // console.log(factRe(10))
@@ -14,18 +14,18 @@ function C(a) {
 
 // Addinh Bits
 function Add(a, b) {
-	if( b=== 0) {
+	if (b === 0) {
 		return a
 	};
-	return Add(a^b , (a&b) << 1);
+	return Add(a ^ b, (a & b) << 1);
 }
 // C(Add(10, 50));
 
 //
 function Senetence(stn) {
 	let words = stn.split(" ");
-	for(var i =0; i<words.length; i++) {
-		console.log(i , ":" , words[i])
+	for (var i = 0; i < words.length; i++) {
+		console.log(i, ":", words[i])
 	}
 }
 var sentence = "the quick brown fox jumped over the lazy dog";
@@ -33,8 +33,8 @@ var sentence = "the quick brown fox jumped over the lazy dog";
 // Senetence(sentence)
 
 //deep copy
-function copy(arr1 , arr2) {
-	for(var i=0; i<arr1.length; i++) {
+function copy(arr1, arr2) {
+	for (var i = 0; i < arr1.length; i++) {
 		arr1[i] = arr2[i]
 	}
 }
@@ -42,7 +42,7 @@ function copy(arr1 , arr2) {
 // 
 function filter(arr) {
 	let even = arr.filter(function (x) {
-		return (x%2 === 0)
+		return (x % 2 === 0)
 	})
 	console.log(even)
 }
@@ -52,31 +52,31 @@ let data = [4, 8, 15, 16, 23, 42];
 
 
 // Matrix 
-function Matrix(numRows , numCols , initial) {
+function Matrix(numRows, numCols, initial) {
 	let arr = [];
-        for (var i = 0; i < numRows; i++) {
-            let columns = [];
-            for (var j = 0; j < numCols; j++) {
-                columns[j] = initial;
-            }
-            arr[i] = columns;
-        }
-        return arr;
-}	
+	for (var i = 0; i < numRows; i++) {
+		let columns = [];
+		for (var j = 0; j < numCols; j++) {
+			columns[j] = initial;
+		}
+		arr[i] = columns;
+	}
+	return arr;
+}
 
 // C(Matrix(3 , 3 ,9))
 
 // palidronimonail 
 function pali(str) {
 	let stack = [];
-	for(var i =0 ;i< str.length; i++) {
+	for (var i = 0; i < str.length; i++) {
 		stack.push(str[i]);
 	}
 	let reverWord = ""
-	while(stack.length) {
+	while (stack.length) {
 		reverWord += stack.pop()
 	}
-	if(reverWord === str) {
+	if (reverWord === str) {
 		return true
 	}
 	return false
@@ -90,18 +90,18 @@ class PriorityQueue {
 		this.Item = [];
 	}
 	enqueue(add) {
-		if(this.Item.length === 0) {
+		if (this.Item.length === 0) {
 			this.Item.push(add)
 		} else {
 			let added = false
-			for(var i =0; i<this.Item.length; i++) {
-				if(add[1] < this.Item[i][1]) {
-					this.Item.splice(i , 0 , add);
-					added= true;
+			for (var i = 0; i < this.Item.length; i++) {
+				if (add[1] < this.Item[i][1]) {
+					this.Item.splice(i, 0, add);
+					added = true;
 					break;
 				}
 			}
-			if(!added) {
+			if (!added) {
 				this.Item.push(add)
 			}
 		}
@@ -125,25 +125,25 @@ class PriorityQueue {
 
 // Linklist 
 class Node {
-	constructor(data){
-		this.value= data;
-		this.next= null;
+	constructor(data) {
+		this.value = data;
+		this.next = null;
 	}
 }
 
 class LinkList {
-	constructor(){
-		this.head= null;
+	constructor() {
+		this.head = null;
 		this.length = 0
 	}
 	add(value) {
 		let newNode = new Node(value);
-		if(!this.head) {
+		if (!this.head) {
 			this.head = newNode;
 			this.length++;
 		} else {
 			let current = this.head;
-			while(current.next) {
+			while (current.next) {
 				current = current.next;
 			}
 			current.next = newNode;
@@ -152,25 +152,25 @@ class LinkList {
 	}
 	search(value) {
 		let current = this.head;
-		while(current.next) {
-			if(value === current.value){
+		while (current.next) {
+			if (value === current.value) {
 				return value
 			}
 			current = current.next
 		}
 		return null;
 	}
-	insert(value , index){
+	insert(value, index) {
 		let current = this.head;
 		let newNode = new Node(value);
-		if(index === 0){
+		if (index === 0) {
 			newNode.next = current;
-			this.head = newNode; 
+			this.head = newNode;
 		} else {
-			let previus = null ;
+			let previus = null;
 			let i = 0;
-			while(i < index) {
-				previus = current ;
+			while (i < index) {
+				previus = current;
 				current = current.next
 				i++;
 			}
@@ -181,14 +181,14 @@ class LinkList {
 	}
 	remove(index) {
 		let current = this.head;
-		if(index === 0) {
+		if (index === 0) {
 			this.head = current.next;
 		} else {
 			let previus = null
-			let i =0;
-			while( i <index) {
+			let i = 0;
+			while (i < index) {
 				previus = current;
-				current = current.next 
+				current = current.next
 				i++;
 			}
 			previus.next = current.next;
@@ -197,7 +197,7 @@ class LinkList {
 	}
 	showNodes() {
 		let curent = this.head
-		while(current.next) {
+		while (current.next) {
 			console.log(current);
 			current = current.next
 		}
@@ -217,16 +217,16 @@ class DNode {
 class DoubleLinkList {
 	constructor() {
 		this.head = null
-		this.length  
+		this.length
 	}
 	addNode(vale) {
 		let newNode = new DNode(value);
-		if(!this.head) {
+		if (!this.head) {
 			this.head = newNode;
 			this.length++
 		} else {
 			let current = this.head;
-			while(current.next) {
+			while (current.next) {
 				let current = current.next
 			}
 			current.next = newNode;
@@ -236,14 +236,14 @@ class DoubleLinkList {
 	}
 	find(data) {
 		let current = this.head;
-		while(current.next) {
-			if(data !== current.value) {
-				current  = current.next
+		while (current.next) {
+			if (data !== current.value) {
+				current = current.next
 			}
 			return current;
 		}
 	}
-	insert(data , index) {
+	insert(data, index) {
 		let newNode = new DNode(data);
 		let current = this.head;
 		// if(index === 

@@ -1,5 +1,3 @@
-
-
 // find second smallest number in array
 function secondSmallest(arr) {
     let first = Infinity;

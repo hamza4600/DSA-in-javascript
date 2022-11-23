@@ -33,8 +33,8 @@ class CircularLinkedList {
     let newNode = new Node(val);
     if (!this.head) {
       // if there is no head
-      this.head = newNode; 
-      this.tail = newNode;  
+      this.head = newNode;
+      this.tail = newNode;
     } else {
       this.tail.next = newNode; // if there is a head then the tail will point to the new node
       newNode.next = this.head; // the new node will point to the head

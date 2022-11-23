@@ -84,7 +84,7 @@ function binarySearch(arr, target, start, end) {
 function spiral(matrix){
   const res = []
   while(matrix.length){
-    const first = matrix.shift()
+    const first = matrix.shift()  
     res.push(...first)
     for(const m of matrix){
       let val = m.pop()

@@ -11,7 +11,7 @@ class Linklist {
     this.head = null;
     this.length = 0;
   }
-// add a node to the end of the list
+  // add a node to the end of the list
   append(data) {
     let newNode = new Node(data);
     if (this.head === null) {
@@ -25,7 +25,7 @@ class Linklist {
     }
     this.length++;
   }
-// insert a node at a specific position
+  // insert a node at a specific position
   insert(position, data) {
     if (position < 0 || position > this.length) return false;
 
@@ -58,7 +58,7 @@ class Linklist {
     }
     return current.data;
   }
-// seraching is O(n)    
+  // seraching is O(n)    
   indexOf(data) {
     let current = this.head;
     let index = 0;

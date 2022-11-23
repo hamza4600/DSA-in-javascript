@@ -6,11 +6,11 @@
 function selectionSort(arr) {
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < arr.length; j++) {
-        if (arr[i] < arr[j]) {
-            let temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
-        }
+            if (arr[i] < arr[j]) {
+                let temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
         }
     }
     return arr;
@@ -26,11 +26,11 @@ console.log(selectionSort([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]));
 // repeatedely swap two adjcent items if they are in wrong order
 // inefficent algo and run up to i times
 // best case O(n) and worst case O(n^2)
- 
+
 // can also be writtens as
 let bubbleSort = (inputArr) => {
     let len = inputArr.length;
-    let elementSwipe= false;
+    let elementSwipe = false;
     for (let i = 0; i < len; i++) {
         for (let j = 0; j < len; j++) {
             if (inputArr[j] > inputArr[j + 1]) {
@@ -40,7 +40,7 @@ let bubbleSort = (inputArr) => {
                 elementSwipe = true;
             }
         }
-        if(elementSwipe === true){
+        if (elementSwipe === false) {
             break;
         }
     }
@@ -49,7 +49,6 @@ let bubbleSort = (inputArr) => {
 
 // test
 console.log(bubbleSort([1, 2, 30, 4, 50, 600, 700, 8, 9, 10]));
-
 
 // insertion sort
 // insert the element at the correct position in the sorted array

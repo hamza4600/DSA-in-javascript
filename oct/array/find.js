@@ -70,22 +70,3 @@ console.log(findItem(arr, 100));
 // binary search is faster than linear search binary search is divide and conquer algorithm
 // items in array must be sorted
 // time complexity of binary search is O(log2 n)
-
-function binarySeaarch(arr , n) {
-    let start = 0;
-    let end = arr.length - 1;
-    while(start <= end) {
-        let mid = Math.floor((start + end) / 2);
-        if(arr[mid] === n) {
-        return true;
-        } else if(arr[mid] < n) {
-        start = mid + 1;
-        } else {
-        end = mid - 1;
-        }
-    }
-    return false;
-}
-
-// test
-console.log(binarySeaarch([10,15,18], 10));

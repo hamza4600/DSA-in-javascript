@@ -358,3 +358,4 @@ function Artical({artical}){
         setNewArr([...newArr]);
     }
 }
+

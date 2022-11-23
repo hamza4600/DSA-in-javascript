@@ -105,8 +105,8 @@ class PriorityQueueH {
         this.bubbleUp();
     }
     bubbleUp() {
-         // add new element with priority to the end of the array
-         // if two element having smae priority then add new element after the old element
+        // add new element with priority to the end of the array
+        // if two element having smae priority then add new element after the old element
         let idx = this.values.length - 1;
         const element = this.values[idx];
         while (idx > 0) {
@@ -161,9 +161,9 @@ class PriorityQueueH {
     }
     // print
     print() {
-       for(var i = 0; i<this.values.length;i++){
-           console.log(this.values[i].val,this.values[i].priority)
-       }
+        for (var i = 0; i < this.values.length; i++) {
+            console.log(this.values[i].val, this.values[i].priority)
+        }
     }
 }
 
@@ -243,26 +243,26 @@ console.log(pqB.dequeue());
 
 
 class PQL { // priority queue link list
-	constructor() { 
-	this.head = null;
-	}
-	enqueue(data , priority) {
-		let newNode = new PNode(data , priority);
-		if(!this.head || priority < this.head.priority) {
-			newNode.next = this.head;
-			this.head = newNode
-		} else {
-			let current = this.head;
-			while(current.next && priority > current.next.priority) {
-				current = current.next
-			}
-			newNode.next = current.next;
-			current.next = newNode
-		}
-	}
-	dequeu(){
-		let temp = this.head;
-		this.head = this.head.next
-		return temp
-	}
+    constructor() {
+        this.head = null;
+    }
+    enqueue(data, priority) {
+        let newNode = new PNode(data, priority);
+        if (!this.head || priority < this.head.priority) {
+            newNode.next = this.head;
+            this.head = newNode
+        } else {
+            let current = this.head;
+            while (current.next && priority > current.next.priority) {
+                current = current.next
+            }
+            newNode.next = current.next;
+            current.next = newNode
+        }
+    }
+    dequeu() {
+        let temp = this.head;
+        this.head = this.head.next
+        return temp
+    }
 }

@@ -19,19 +19,19 @@ class Stack {
   peek() {
     return this.Item[this.Item.length - 1];
   }
-    // size
-    size() {
-        return this.Item.length;
-        }
-    // isEmpty
-    isEmpty() {
-        return this.Item.length === 0;
-    }   
-    allItems() {
-        for(var i = 0; i < this.Item.length; i++) {
-            console.log(this.Item[i]);
-        }
+  // size
+  size() {
+    return this.Item.length;
+  }
+  // isEmpty
+  isEmpty() {
+    return this.Item.length === 0;
+  }
+  allItems() {
+    for (var i = 0; i < this.Item.length; i++) {
+      console.log(this.Item[i]);
     }
+  }
 }
 
 

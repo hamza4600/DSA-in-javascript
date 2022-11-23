@@ -95,6 +95,7 @@ function Pali2(str) {
 }
 // recusrion 
 function PaliRe(str) {
+    // str === str.split("").reverse().join("")
     if (str.length === 0) {
         return true;
     }
@@ -108,6 +109,8 @@ function PaliRe(str) {
 }
 
 console.log(pali("aba"))
+
+
 
 // all permutation of an array using recursion
 
