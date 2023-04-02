@@ -3,7 +3,6 @@
 
 // comman element in k sorted array 
 
-
 function commonElements(arr) {
     let hashMap = {};
     let last;
@@ -26,7 +25,6 @@ function commonElements(arr) {
     // let count =1; can use if want to count the number 
     for (var prps in hashMap) {
         if (hashMap[prps] === arr.length) {
-
             ans.push(prps)
         }
     }

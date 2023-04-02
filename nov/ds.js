@@ -282,20 +282,3 @@ class BinaryTree {
 		return current;
 	}
 }
-
-// // 
-// class Tree {
-// 	constructor() {
-// 		this.List = {};
-// 	}
-// 	addVerix(vertix) {
-// 		if (!this.List[vertix]) this.List[vertix] = [];
-// 	}
-// 	addEdges(vert1, vert2) {
-// 		this.List[vert1].push(vertix2)
-// 		this.List[vert2].push(vertix1)
-// 	}
-// 	allNode() {
-// 		return Object.keys(this.List)
-// 	}
-// }

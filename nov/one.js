@@ -170,7 +170,7 @@ function sortMatrix(arr, traget) {
 function transpose(arr) {
 	for (var i = 0; i < arr.length; i++) {
 		for (var j = 0; j < arr[i].length; j++) {
-			let tem = arr[i][j];
+			let temp = arr[i][j];
 			arr[i][j] = arr[j][i];
 			arr[j][i] = temp
 		}

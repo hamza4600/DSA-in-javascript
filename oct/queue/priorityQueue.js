@@ -240,29 +240,3 @@ pqB.enqueue("broken arm", 2);
 pqB.enqueue("glass in foot", 3);
 console.log(pqB.dequeue());
 console.log(pqB.dequeue());
-
-
-class PQL { // priority queue link list
-    constructor() {
-        this.head = null;
-    }
-    enqueue(data, priority) {
-        let newNode = new PNode(data, priority);
-        if (!this.head || priority < this.head.priority) {
-            newNode.next = this.head;
-            this.head = newNode
-        } else {
-            let current = this.head;
-            while (current.next && priority > current.next.priority) {
-                current = current.next
-            }
-            newNode.next = current.next;
-            current.next = newNode
-        }
-    }
-    dequeu() {
-        let temp = this.head;
-        this.head = this.head.next
-        return temp
-    }
-}

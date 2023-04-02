@@ -126,6 +126,7 @@ class CircularLinkedList {
     return removed;
   }
   reverse() {
+    
     let node = this.head;
     this.head = this.tail;
     this.tail = node;

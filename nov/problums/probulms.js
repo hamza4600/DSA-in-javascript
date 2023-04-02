@@ -190,13 +190,13 @@ console.log(spiral([[1, 2, 3], [4, 5, 6], [7, 8, 9]]));
 function pali(s) {
     const set = new Set();
     let count = 0;
-    
+
     for (const char of s) {
         if (set.has(char)) {
-			count += 2;
+            count += 2;
             set.delete(char);
-        } 
-		else {
+        }
+        else {
             set.add(char);
         }
     }
@@ -210,12 +210,12 @@ function cycle(head) {
     let slow = head;
     let fast = head;
 
-    while(fast && fast.next && fast.next.next) {
+    while (fast && fast.next && fast.next.next) {
         slow = slow.next;
         fast = fast.next.next;
-        if(slow === fast) {
+        if (slow === fast) {
             slow = head;
-            while(slow !== fast) {
+            while (slow !== fast) {
                 slow = slow.next;
                 fast = fast.next;
             }

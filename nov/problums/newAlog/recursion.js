@@ -110,8 +110,6 @@ function PaliRe(str) {
 
 console.log(pali("aba"))
 
-
-
 // all permutation of an array using recursion
 
 function permute(arr) {

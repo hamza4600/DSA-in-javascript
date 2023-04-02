@@ -432,7 +432,7 @@ class LinkedList {
     insert(data, index) {
         let current = this.head;
         let newNode = new Node(data);
-        if (index === 0) {  
+        if (index === 0) {
             newNode.next = current;
             this.head = newNode;
         }
@@ -489,13 +489,13 @@ console.log(ll.search(30));
 
 
 +// Double link List 
-class DNode {
-    constructor(data) {
-        this.data = data;
-        this.next = null;
-        this.previous = null;
+    class DNode {
+        constructor(data) {
+            this.data = data;
+            this.next = null;
+            this.previous = null;
+        }
     }
-}
 
 class DoubleLink {
     constructor() {
@@ -742,8 +742,8 @@ class HashTable {
     }
     // hashing interger value
     hashInt(data) {
-            let random = Math.floor(Math.random() * 100);
-            return data * random % this.table.length; 
+        let random = Math.floor(Math.random() * 100);
+        return data * random % this.table.length;
     }
     add(data) {
         let pos = this.betterHash(data);
@@ -783,7 +783,7 @@ class HashTable {
 class Set {
     constructor() {
         // this.items = {};
-        this.Item= [];
+        this.Item = [];
     }
     // add unique value to set
     add(value) {
@@ -806,18 +806,18 @@ class Set {
         return false;
     }
     contain(value) {
-        if(this.Item.indexOf(value) > -1){
+        if (this.Item.indexOf(value) > -1) {
             return true;
         }
         return false;
     }
     subSet(set) {
-        if(this.Item.length > set.Item.length){
+        if (this.Item.length > set.Item.length) {
             return false;
         }
-        else{
-            for(let i = 0; i < this.Item.length; i++){
-                if(!set.contain(this.Item[i])){
+        else {
+            for (let i = 0; i < this.Item.length; i++) {
+                if (!set.contain(this.Item[i])) {
                     return false;
                 }
             }
